@@ -29,31 +29,29 @@
           <li><a href="#" id="small-logo-3" class="logo small-logo"></a></li>
         </ul>
       </nav>
-      <form action="./index.html" method="post">
+      <form action="./index.html" method="post" id="sign-form">
         <header>
           <h2>Create an Intuit account</h2>
           <p>One account for everything into it, including Mint.</p>
-          <a href="#">Learn more</a>
+          <p><a href="#">Learn more</a></p>
         </header>
         <fieldset class="user-data">
           <div class="field">
             <label for="mail">Email address</label>
-            <input type="email" id="mail" name="mail">
+            <input type="email" id="mail" name="mail" required>
           </div>
           <div class="field">
             <label for="tlf">Phone (recommended)</label>
-            <input type="tel" id="tlf" name="tlf">
-            <i class="fas fa-exclamation-circle inset-fas"></i>
+            <input type="tel" id="tlf" name="tlf" required><i class="fas fa-exclamation-circle inset-fas"></i>
           </div>
-          <span>Standard call, messaging or data rates may apply</span>
+          <p id="tlf-info">Standard call, messaging or data rates may apply</p>
           <div class="field">
             <label for="pass">Password</label>
-            <input type="password" id="pass" name="pass">
-            <i class="fas fa-lock-open inset-fas"></i>
+            <input type="password" id="pass" name="pass" required><i class="fas fa-lock-open inset-fas"></i>
           </div>
           <div class="field">
             <label for="confirm-pass">Confirm password</label>
-            <input type="password" id="confirm-pass" name="confirm-pass">
+            <input type="password" id="confirm-pass" name="confirm-pass" required><i class="far fa-times-circle inset-fas"></i>
           </div>
         </fieldset>
         <fieldset class="submit-data">
@@ -69,7 +67,7 @@
       </form>
     </main>
 
-    <footer>
+    <footer id="main-footer">
       <ul>
         <li><a href="#">Legal</a></li>
         <li><a href="#">Privacy</a></li>
@@ -77,7 +75,7 @@
       </ul>
       <p>© 2019 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.
       <br/>
-          Terms and conditions, features, support, pricing, and service options subject to change without notice.
+        Terms and conditions, features, support, pricing, and service options subject to change without notice.
       </p>
     </footer>
   </body>

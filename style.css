@@ -14,3 +14,35 @@ a {
 footer a, footer {
   color: #505050;
 }
+
+a.logo {
+  display: inline-block;
+  background-image: url(static/ecosystem_logos_new.png);
+}
+
+a#main-logo {
+  width: 118px;
+  height: 35px;
+}
+
+a.small-logo {
+  height: 23px;
+}
+
+/* mint logo */
+a#small-logo-1 {
+  width: 62px;
+  background-position: 308px 110px;
+}
+
+/* quickbooks logo */
+a#small-logo-2 {
+  width: 126px;
+  background-position: 448px 110px;
+}
+
+/* turbo logo */
+a#small-logo-3 {
+  width: 102px;
+  background-position: 0px 110px; 
+}

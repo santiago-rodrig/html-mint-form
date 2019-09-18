@@ -307,18 +307,18 @@ footer#main-footer li:last-child {
   }
 }
 
-@keyframes slide3 {
-  0% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes slide2 {
   0% {
     transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    transform: translateX(5px);
   }
   100% {
     transform: translateX(0);

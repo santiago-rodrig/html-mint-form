@@ -1,0 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #0077c5;
+  text-decoration: none;
+}
+
+footer a, footer {
+  color: #505050;
+}

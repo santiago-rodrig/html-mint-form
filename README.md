@@ -1,6 +1,6 @@
-# Youtube page clone
+# Mint.com's signup-form page
 
-This project objective is to practice HTML5 form validation and data input plus reinfrocing semantic HTML best practices and layout with CSS styling and animations form zero, by attempting to clone the page https://accounts.intuit.com/signup.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event%3Ftask%3DS.
+This project objective is to practice HTML5 form validation and data input plus reinfrocing semantic HTML best practices and layout with CSS styling and animations form zero, by attempting to clone the signup page from [Mint.com](https://accounts.intuit.com/signup.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event%3Ftask%3DS).
 
 ## Getting Started
 

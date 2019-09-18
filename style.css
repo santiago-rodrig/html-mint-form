@@ -105,7 +105,7 @@ a#small-logo-1 {
   width: 62px;
   background-position: 308px 110px;
   transform: scale(0);
-  animation: popCenter1 0.5s ease-out 0.5s 1 forwards, slide1 0.5s ease-out 0.5s 1 forwards;
+  animation: slide1 1.5s ease-out 0.5s 1 forwards, fadein 0.3s ease-out 0.5s 1 forwards;
 }
 
 /* quickbooks logo */
@@ -113,7 +113,7 @@ a#small-logo-2 {
   width: 126px;
   background-position: 448px 110px;
   transform: scale(0);
-  animation: popCenterSlide 0.5s ease-out 0.7s 1 forwards, slide1 0.5s ease-out 0.7s 1 forwards;
+  animation: popCenterSlide 0.5s ease-out 1.8s 1 forwards, slide2 0.5s ease-out 1.7s 1 forwards, fadein 0.3s ease-out 1.7s 1 forwards;
 }
 
 /* turbo logo */
@@ -121,7 +121,7 @@ a#small-logo-3 {
   width: 102px;
   background-position: 0px 110px; 
   transform: scale(0);
-  animation: popCenterSlide 0.5s ease-out 0.9s 1 forwards, slide1 0.5s ease-out 0.9s 1 forwards;
+  animation: popCenterSlide 0.5s ease-out 2.1s 1 forwards, slide3 0.5s ease-out 1.9s 1 forwards, fadein 0.3s ease-out 1.9s 1 forwards;
 }
 
 /* Form styles */
@@ -170,12 +170,29 @@ form#sign-form h2 {
   border-radius: 3px;
 }
 
+.form-inp:invalid ~ .inset-fas {
+  opacity: 1;
+  color: red;
+}
+
+#tlf:invalid ~ .inset-fas {
+  color: orange;
+}
+
+#tlf:valid ~ .inset-fas {
+  opacity: 0;
+}
+
+#confirm-pass:valid ~ .inset-fas {
+  opacity: 0;
+}
+
 .form-inp:focus {
   border: 1px solid rgb(105, 208, 248);
   box-shadow: 0 0 7px 0px rgb(105, 208, 248);
 }
 
-.form-inp:focus ~ .inset-fas {
+.form-inp:focus ~ .inset-fas { 
   opacity: 0;
 }
 
@@ -263,18 +280,6 @@ footer#main-footer li:last-child {
   }
 }
 
-@keyframes popCenter1 {
-  0% {
-    transform: scale(0);
-  }
-  80% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes popCenterSlide {
   0% {
     transform: scale(0);
@@ -286,7 +291,25 @@ footer#main-footer li:last-child {
 
 @keyframes slide1 {
   0% {
-    transform: translateX(120px);
+    width: 26px;
+    transform: translateX(130px) scale(0);
+  }
+  60% {
+    width: 26px;
+    transform: translateX(130px) scale(2); 
+  }
+  80% {
+    width: 26px;
+    transform: translateX(130px) scale(1); 
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    transform: translateX(5px);
   }
   100% {
     transform: translateX(0);
@@ -296,15 +319,6 @@ footer#main-footer li:last-child {
 @keyframes slide2 {
   0% {
     transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide3 {
-  0% {
-    transform: translateX(5px);
   }
   100% {
     transform: translateX(0);

@@ -5,6 +5,7 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #eceef1;
+  padding: 0 20px;
 }
 
 a {
@@ -51,6 +52,7 @@ footer a, footer {
   justify-content: flex-end;
   font-size: 12px;
   margin: 8px 0;
+  margin-bottom: 30px;
   padding: 0 20px;
   height: 35px;
 }
@@ -90,6 +92,8 @@ a#main-logo {
   width: 118px;
   height: 35px;
   transform: scale(0.9);
+  opacity: 0;
+  animation: fadein 0.5s ease-out 1s 1 forwards;
 }
 
 a.small-logo {
@@ -100,18 +104,24 @@ a.small-logo {
 a#small-logo-1 {
   width: 62px;
   background-position: 308px 110px;
+  transform: scale(0);
+  animation: popCenter1 0.5s ease-out 0.5s 1 forwards, slide1 0.5s ease-out 0.5s 1 forwards;
 }
 
 /* quickbooks logo */
 a#small-logo-2 {
   width: 126px;
   background-position: 448px 110px;
+  transform: scale(0);
+  animation: popCenterSlide 0.5s ease-out 0.7s 1 forwards, slide1 0.5s ease-out 0.7s 1 forwards;
 }
 
 /* turbo logo */
 a#small-logo-3 {
   width: 102px;
   background-position: 0px 110px; 
+  transform: scale(0);
+  animation: popCenterSlide 0.5s ease-out 0.9s 1 forwards, slide1 0.5s ease-out 0.9s 1 forwards;
 }
 
 /* Form styles */
@@ -126,7 +136,13 @@ form#sign-form {
   text-align: center;
   padding: 25px;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+  opacity: 0;
+  animation: fadein 0.5s ease-out 0.2s 1 forwards;
+}
+
+#sign-form fieldset {
+  color: #404040;
 }
 
 div.field {
@@ -141,11 +157,31 @@ div.field:first-child {
 p#tlf-info {
   text-align: left;
   font-size: 10px;
-  margin-top: -10px;
+  margin-top: -25px;
 }
 
 form#sign-form h2 {
   font-weight: 400;
+}
+
+.form-inp {
+  padding: 6px;
+  border: 1px solid #C1C5C8;
+  border-radius: 3px;
+}
+
+.form-inp:focus {
+  border: 1px solid rgb(105, 208, 248);
+  box-shadow: 0 0 7px 0px rgb(105, 208, 248);
+}
+
+.form-inp:focus ~ .inset-fas {
+  opacity: 0;
+}
+
+.form-inp:focus ~ .remain {
+  color: rgba(172, 176, 179, 0.603);
+  opacity: 1;
 }
 
 form#sign-form h2 ~ p {
@@ -197,6 +233,7 @@ form#sign-form footer {
 footer#main-footer {
   text-align: center;
   margin-top: 40px;
+  font-size: 12px;
 }
 
 footer#main-footer ul {
@@ -212,4 +249,64 @@ footer#main-footer li {
 
 footer#main-footer li:last-child {
   margin-right: 0;
+}
+
+/* Animations */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popCenter1 {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popCenterSlide {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(120px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

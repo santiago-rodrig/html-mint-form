@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #eceef1;
 }
 
 a {
@@ -11,8 +12,72 @@ a {
   text-decoration: none;
 }
 
+/* Icon styles */
+
+.fas {
+  margin-right: 5px;
+}
+
+.inset-fas {
+  margin-left: -25px;
+}
+
+/* */
+
+/* Button styles */
+
+.auth-btn {
+  border: 1px solid #4c4c4c;
+  border-radius: 4px;
+  background-color: #0077C5;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.submit-data .auth-btn {
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* */
+
 footer a, footer {
   color: #505050;
+}
+
+.signup-area {
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 12px;
+  margin: 8px 0;
+  padding: 0 20px;
+  height: 35px;
+}
+
+.signup-area p {
+  margin: 0;
+  margin-right: 8px;
+  line-height: 1rem;
+}
+
+.nav-bar, .nav-links, .signup-area {
+  display:flex;
+}
+
+.nav-bar {
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  transform: scale(0.9)
+}
+
+.nav-links li {
+  margin: 0 4px;
 }
 
 a.logo {
@@ -23,6 +88,7 @@ a.logo {
 a#main-logo {
   width: 118px;
   height: 35px;
+  transform: scale(0.9);
 }
 
 a.small-logo {

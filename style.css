@@ -1,0 +1,326 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #eceef1;
+  padding: 0 20px;
+}
+
+a {
+  color: #0077c5;
+  text-decoration: none;
+}
+
+/* Icon styles */
+
+.fas {
+  margin-right: 5px;
+}
+
+.inset-fas {
+  margin-left: -25px;
+}
+
+/* */
+
+/* Button styles */
+
+.auth-btn {
+  border: 1px solid #4c4c4c;
+  border-radius: 4px;
+  background-color: #0077C5;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.submit-data .auth-btn {
+  padding: 10px 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* */
+
+footer a, footer {
+  color: #505050;
+}
+
+.signup-area {
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 12px;
+  margin: 8px 0;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  height: 35px;
+}
+
+.signup-area p {
+  margin: 0;
+  margin-right: 8px;
+  line-height: 1rem;
+}
+
+.nav-bar, .nav-links, .signup-area {
+  display:flex;
+}
+
+.nav-bar {
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  transform: scale(0.9)
+}
+
+.nav-links li {
+  margin: 0 4px;
+}
+
+a.logo {
+  display: inline-block;
+  background-image: url(static/ecosystem_logos_new.png);
+}
+
+a#main-logo {
+  width: 118px;
+  height: 35px;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: fadein 0.5s ease-out 1s 1 forwards;
+}
+
+a.small-logo {
+  height: 23px;
+}
+
+/* mint logo */
+a#small-logo-1 {
+  width: 62px;
+  background-position: 308px 110px;
+  transform: scale(0);
+  animation: slide1 1.5s ease-out 0.5s 1 forwards, fadein 0.3s ease-out 0.5s 1 forwards;
+}
+
+/* quickbooks logo */
+a#small-logo-2 {
+  width: 126px;
+  background-position: 448px 110px;
+  transform: scale(0);
+  animation: popCenterSlide 0.5s ease-out 1.8s 1 forwards, slide2 0.5s ease-out 1.7s 1 forwards, fadein 0.3s ease-out 1.7s 1 forwards;
+}
+
+/* turbo logo */
+a#small-logo-3 {
+  width: 102px;
+  background-position: 0px 110px; 
+  transform: scale(0);
+  animation: popCenterSlide 0.5s ease-out 2.1s 1 forwards, slide3 0.5s ease-out 1.9s 1 forwards, fadein 0.3s ease-out 1.9s 1 forwards;
+}
+
+/* Form styles */
+
+form#sign-form {
+  color: #4c4c4c;
+  background-color: #fff;
+  border: 1px solid #c7c7c7;
+  border-radius: 2px;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px;
+  position: relative;
+  padding-bottom: 70px;
+  opacity: 0;
+  animation: fadein 0.5s ease-out 0.2s 1 forwards;
+}
+
+#sign-form fieldset {
+  color: #404040;
+}
+
+div.field {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+div.field:first-child {
+  margin-top: 20px;
+}
+
+p#tlf-info {
+  text-align: left;
+  font-size: 10px;
+  margin-top: -25px;
+}
+
+form#sign-form h2 {
+  font-weight: 400;
+}
+
+.form-inp {
+  padding: 6px;
+  border: 1px solid #C1C5C8;
+  border-radius: 3px;
+}
+
+.form-inp:invalid ~ .inset-fas {
+  opacity: 1;
+  color: red;
+}
+
+#tlf:invalid ~ .inset-fas {
+  color: orange;
+}
+
+#tlf:valid ~ .inset-fas {
+  opacity: 0;
+}
+
+#confirm-pass:valid ~ .inset-fas {
+  opacity: 0;
+}
+
+.form-inp:focus {
+  border: 1px solid rgb(105, 208, 248);
+  box-shadow: 0 0 7px 0px rgb(105, 208, 248);
+}
+
+.form-inp:focus ~ .inset-fas { 
+  opacity: 0;
+}
+
+.form-inp:focus ~ .remain {
+  color: rgba(172, 176, 179, 0.603);
+  opacity: 1;
+}
+
+form#sign-form h2 ~ p {
+  margin: 0;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+}
+
+label {
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+fieldset:first-child {
+  margin-bottom: 20px;
+}
+
+fieldset.submit-data p {
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+form#sign-form footer {
+  background-color: #eceef1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 10px;
+  padding: 10px 0;
+}
+
+/* Footer */
+
+footer#main-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+footer#main-footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+footer#main-footer li {
+  margin-right: 10px;
+}
+
+footer#main-footer li:last-child {
+  margin-right: 0;
+}
+
+/* Animations */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popCenterSlide {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide1 {
+  0% {
+    width: 26px;
+    transform: translateX(130px) scale(0);
+  }
+  60% {
+    width: 26px;
+    transform: translateX(130px) scale(2); 
+  }
+  80% {
+    width: 26px;
+    transform: translateX(130px) scale(1); 
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
